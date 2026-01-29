@@ -1,0 +1,50 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container { text-align: center; z-index: 1; max-width: 500px; width: 90%; }
+
+.ai-icon {
+  width: 100px; height: 100px; background: #00ffd5; 
+  border-radius: 25px; margin: 0 auto 20px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 50px; box-shadow: 0 0 30px rgba(0, 255, 213, 0.4);
+}
+
+#chat-output {
+  margin: 20px 0; min-height: 60px; color: #00ffd5;
+  font-style: italic; font-size: 18px;
+}
+
+.status {
+  padding: 10px 20px; border: 1px solid #00ffd5;
+  border-radius: 20px; margin-bottom: 20px; display: inline-block;
+}
+
+.ai-button {
+  padding: 15px 40px; border-radius: 30px; border: none;
+  background: #00ffd5; color: #0f2027; font-weight: bold;
+  cursor: pointer; transition: 0.3s;
+}
+
+.ai-button:hover { transform: scale(1.05); box-shadow: 0 0 20px #00ffd5; }
+
+.wave-container { 
+    display: none; justify-content: center; gap: 5px; margin-top: 20px; 
+}
+
+.wave-bar { 
+    width: 4px; height: 20px; background: #00ffd5; 
+    animation: wave 1s infinite ease-in-out; 
+}
+
+@keyframes wave { 0%, 100% { height: 10px; } 50% { height: 40px; } }
