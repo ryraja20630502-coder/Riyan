@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "bridge/server.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "bridge/server.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "ui/$1"
+    }
+  ]
+}
+
